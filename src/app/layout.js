@@ -14,6 +14,15 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Weather App",
   description: "A simple weather application",
+  icons: {
+    icon: [
+      { rel: "icon", url: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {

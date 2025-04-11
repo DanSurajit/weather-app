@@ -132,7 +132,7 @@ export default function Weather() {
       <WeatherBackground condition={weather?.condition} />
       <div className="max-w-md mx-auto relative z-10">
         <div className="backdrop-blur-lg bg-white/10 p-8 rounded-2xl shadow-2xl border border-white/10">
-          <h1 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-blue-200 to-cyan-200 bg-clip-text text-transparent">
+          <h1 className="text-4xl font-bold mb-8 text-center bg-gradient-to-r from-blue-200 to-cyan-200 bg-clip-text text-transparent tracking-tight">
             Weather Forecast
           </h1>
 
@@ -150,7 +150,7 @@ export default function Weather() {
                   placeholder="Enter city name..."
                   className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl 
                            focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent
-                           placeholder:text-white/50 text-white"
+                           placeholder:text-white/50 text-white tracking-wide"
                   required
                 />
 
@@ -166,7 +166,7 @@ export default function Weather() {
                       return (
                         <div
                           key={suggestion}
-                          className={`px-4 py-2 cursor-pointer transition-colors
+                          className={`px-4 py-2 cursor-pointer transition-colors tracking-wide
                             ${
                               index === selectedIndex
                                 ? "bg-blue-500/20 text-white"
@@ -176,7 +176,7 @@ export default function Weather() {
                           onMouseEnter={() => setSelectedIndex(index)}
                         >
                           <span className="font-medium">{city}</span>
-                          <span className="text-white/60 text-sm ml-2">
+                          <span className="text-white/60 text-sm ml-2 font-light">
                             {country}
                           </span>
                         </div>
@@ -192,7 +192,7 @@ export default function Weather() {
                 className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold 
                          rounded-xl transition-all duration-200 disabled:opacity-50 
                          disabled:cursor-not-allowed shadow-lg shadow-blue-500/30
-                         hover:shadow-blue-500/50 active:scale-95 min-w-[100px]"
+                         hover:shadow-blue-500/50 active:scale-95 min-w-[100px] tracking-wide"
               >
                 {loading ? (
                   <span className="flex items-center justify-center gap-2">
@@ -208,7 +208,7 @@ export default function Weather() {
 
           {error && (
             <div className="mb-6 p-4 rounded-xl bg-red-500/20 border border-red-500/50 text-red-200">
-              <p className="flex items-center gap-2">
+              <p className="flex items-center gap-2 tracking-wide">
                 <span>⚠️</span>
                 {error}
               </p>
@@ -219,7 +219,7 @@ export default function Weather() {
             <div className="rounded-xl overflow-hidden">
               <div className="p-6 backdrop-blur-sm bg-gradient-to-br from-white/10 to-white/5 border border-white/10">
                 <div className="flex items-center justify-between mb-6">
-                  <h2 className="text-2xl font-bold text-white">
+                  <h2 className="text-2xl font-bold text-white tracking-tight">
                     {weather.city}
                   </h2>
                   <span
@@ -233,24 +233,24 @@ export default function Weather() {
 
                 <div className="space-y-6">
                   <div className="flex items-baseline gap-2">
-                    <span className="text-6xl font-bold text-white">
+                    <span className="text-6xl font-bold text-white tracking-tight">
                       {weather.temperature}°
                     </span>
                     <span className="text-2xl text-white/80">C</span>
                   </div>
 
                   <div className="space-y-3 text-white/80">
-                    <p className="flex items-center gap-2">
+                    <p className="flex items-center gap-2 tracking-wide">
                       <span className="font-medium text-white">Condition:</span>
                       {weather.condition}
                     </p>
-                    <p className="flex items-center gap-2">
+                    <p className="flex items-center gap-2 tracking-wide">
                       <span className="font-medium text-white">
                         Description:
                       </span>
                       {weather.description}
                     </p>
-                    <p className="flex items-center gap-2">
+                    <p className="flex items-center gap-2 tracking-wide">
                       <span className="font-medium text-white">Humidity:</span>
                       {weather.humidity}%
                     </p>
